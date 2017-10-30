@@ -17,23 +17,26 @@ namespace Ejercicio_Cuentas
 
         static void Main(string[] args)
         {
-            List<Cliente> listaTitulares = new List<Cliente>();
-
-            Cliente cliente = new Cliente();
-            cliente.DNI = 152232323;
-            cliente.Nombre="Rick";
-            cliente.Apellido = "Sanchez";
-            cliente.Mail = "rick@gmail.com";
-            cliente.Telefono = 45934399;           
             
 
-            listaTitulares.Add(cliente);
+            Cliente rick = new Cliente();
+            rick.DNI = 152232323;
+            rick.Nombre="Rick";
+            rick.Apellido = "Sanchez";
+            rick.Mail = "rick@gmail.com";
+            rick.Fecha_Nacimiento = new DateTime(1990, 02, 05);
+            rick.Telefono = 45934399;           
+            cuenta1.Add(rick);
 
 
 
-            Cuenta cuenta = new Cuenta();
-            cuenta.Numero = 5000;
-            cuenta.Saldo = 6000;
+            Cuenta cuenta1 = new Cuenta();
+            cuenta1.Numero = 5000;
+            cuenta1.Saldo = 6000;
+            cuenta1.Titular = rick;
+
+            cuenta1.DepositarDinero(4000);
+            cuenta1.RetirarDinero(3000);
 
 
 
